@@ -1,0 +1,12 @@
+syntax="proto3";
+
+option java_multiple_files = true;
+
+package net.gichain.test.grpc.user;
+import "ResultDto.proto";
+import "RequestDto.proto";
+
+service UserService{
+    //根据name获取用户信息
+    rpc getUserInfo(net.gichain.test.grpc.dto.UserInfoRequest)returns(net.gichain.test.grpc.dto.Result){}
+}

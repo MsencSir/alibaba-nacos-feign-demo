@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+package net.gichain.test.grpc.dto;
+
+message Result{
+    string code =1; //0:成功 其他:失败
+    string message =2; //描述
+    string success =3; //是否成功
+    string data =4; //返回的业务数据 为json字符串 需要转换使用
+}
